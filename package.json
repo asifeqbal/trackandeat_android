@@ -4,5 +4,14 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "displayName": "Track And Eat"
+    "displayName": "Track And Eat",
+    "dependencies": {
+        "cordova-android": "^7.0.0",
+        "cordova-plugin-splashscreen": "^5.0.2"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-splashscreen": {}
+        }
+    }
 }

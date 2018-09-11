@@ -31,8 +31,6 @@
         <splash density="xhdpi" platform="android" src="res/screen/android/screen-xxhdpi-portrait.png" />
         <splash density="xhdpi" platform="android" src="res/screen/android/screen-xxxhdpi-portrait.png" />
     </platform>
-    
-    
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -43,5 +41,5 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
-    
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
 </widget>
