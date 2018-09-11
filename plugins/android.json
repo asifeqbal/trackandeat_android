@@ -21,6 +21,10 @@
     },
     "cordova-plugin-printer": {
       "PACKAGE_NAME": "com.trackandeat.app"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.trackandeat.app"
     }
   },
   "dependent_plugins": {}
