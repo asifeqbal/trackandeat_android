@@ -9,6 +9,18 @@
   "installed_plugins": {
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.trackandeat.app"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.trackandeat.app"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.trackandeat.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.trackandeat.app"
+    },
+    "cordova-plugin-printer": {
+      "PACKAGE_NAME": "com.trackandeat.app"
     }
   },
   "dependent_plugins": {}
