@@ -8,13 +8,20 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
+	<preference name="loadUrlTimeoutValue" value="700000" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
+	<preference name="fullscreen" value="false" />
+	<preference name="SplashScreenDelay" value="7000" />
+	<preference name="SplashScreen" value="splash" />
+	<preference name="ShowSplashScreenSpinner" value="false" />
+	<preference name="orientation" value="portrait" />
+	<preference name="target-device" value="universal" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#ee6e73" />
     <preference name="StatusBarStyle" value="blacktranslucent" />
     <plugin name="phonegap-plugin-push" source="npm" spec="~1.8.0">
-        <variable name="SENDER_ID" value="XXXXXXX" />
+        <variable name="SENDER_ID" value="460557973166" />
     </plugin>
     <platform name="android">
         <icon src="icon.png" />
