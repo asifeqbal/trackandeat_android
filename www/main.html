@@ -65,11 +65,6 @@
 		
 		function loaded(){
 			document.getElementById('blanker').style.display = 'none';
-			var targetWin=document.getElementById('container-frame').contentWindow;
-						if(targetWin){
-							alert('window found');
-							targetWin.postMessage(args, '*');
-						}
 		}
 		var receiveMessage = function receiveMessage(e){
 			var args = e.data;
@@ -91,7 +86,7 @@
 						var args=new Object();
 						args.task='qrReply';
 						args.reply=result.text;
-						var targetWin=window.frames['container-frame'].contentWindow;
+						var targetWin=document.getElementById('container-frame').contentWindow;
 						if(targetWin){
 							alert('window found');
 							targetWin.postMessage(args, '*');
