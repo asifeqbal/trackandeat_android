@@ -86,11 +86,7 @@
 						var args=new Object();
 						args.task='qrReply';
 						args.reply=result.text;
-						var targetWin=document.getElementById('container-frame').contentWindow;
-						if(targetWin){
-							alert('window found');
-							targetWin.postMessage(args, '*');
-						}
+						document.getElementById('container-frame').contentWindow.postMessage(args, '*');
 					}
 					function error() {
 						alert("Scanning failed: " + error);
