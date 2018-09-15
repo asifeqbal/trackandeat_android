@@ -85,8 +85,12 @@
 					function result(){
 						var args=new Object();
 						args.task='qrReply';
-						args.data=result.text;
-						window.frames['container-frame'].contentWindow.postMessage(args, '*');
+						args.reply=result.text;
+						var targetWin=window.frames['container-frame'].contentWindow;
+						if(targetWin){
+							alert('window found');
+							targetWin.postMessage(args, '*');
+						}
 					}
 					function error() {
 						alert("Scanning failed: " + error);
