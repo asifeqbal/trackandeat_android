@@ -65,7 +65,7 @@
 		
 		function loaded(){
 			document.getElementById('blanker').style.display = 'none';
-			var targetWin=window.frames['container-frame'].contentWindow;
+			var targetWin=document.getElementById('container-frame').contentWindow;
 						if(targetWin){
 							alert('window found');
 							targetWin.postMessage(args, '*');
