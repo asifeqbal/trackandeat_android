@@ -102,7 +102,19 @@
 				navigator.splashscreen.hide();
 				}, 2000);
 				*/
-			
+			cordova.plugins.barcodeScanner.scan(result, error );
+								function result(){
+										  alert("We got a barcode\n" +
+												"Result: " + result.text + "\n" +
+												"Format: " + result.format + "\n" +
+												"Cancelled: " + result.cancelled);
+												var win = window.frames['container-frame'];
+												alert(win);
+									//	document.getElementById('container-frame').src = 'https://www.trackandeat.com/index.php?devType=Android';
+									  }
+								function error() {
+									  alert("Scanning failed: " + error);
+								  }
 			
 			
 		
