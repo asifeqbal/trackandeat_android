@@ -81,19 +81,19 @@
 					});
 					break;
 				case 'qrScanner':
-					cordova.plugins.barcodeScanner.scan(result(resultOut), error );
-					function result(resultOut){
-						var args=new Object();
-						args.task='qrReply';
-						args.reply=resultOut.text;
-						alert(resultOut.text);
-						alert(args.reply);
-						document.getElementById('container-frame').contentWindow.postMessage(args, '*');
-					}
-					function error() {
-						alert("Scanning failed: " + error);
-					}
-					break;
+					cordova.plugins.barcodeScanner.scan(
+						function (result){
+							var args=new Object();
+							args.task='qrReply';
+							args.reply=result.text;
+							alert(result.text);
+							alert(args.reply);
+							document.getElementById('container-frame').contentWindow.postMessage(args, '*');
+						},
+						function (error) {
+							alert("Scanning failed: " + error);
+						}
+					)
 			}
 		};
 		window.addEventListener("message", receiveMessage, false);		
