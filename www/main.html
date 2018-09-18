@@ -81,12 +81,12 @@
 					});
 					break;
 				case 'qrScanner':
-					cordova.plugins.barcodeScanner.scan(result, error );
-					function result(){
+					cordova.plugins.barcodeScanner.scan(result(resultOut), error );
+					function result(resultOut){
 						var args=new Object();
 						args.task='qrReply';
-						args.reply=result.text;
-						alert(result.text);
+						args.reply=resultOut.text;
+						alert(resultOut.text);
 						alert(args.reply);
 						document.getElementById('container-frame').contentWindow.postMessage(args, '*');
 					}
