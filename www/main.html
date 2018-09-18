@@ -86,8 +86,8 @@
 							var args=new Object();
 							args.task='qrReply';
 							args.reply=result.text;
-							alert(result.text);
-							alert(args.reply);
+						//	alert(result.text);
+						//	alert(args.reply);
 							document.getElementById('container-frame').contentWindow.postMessage(args, '*');
 						},
 						function (error) {
