@@ -68,6 +68,7 @@
 		}
 		var receiveMessage = function receiveMessage(e){
 			var args = e.data;
+			alert(args.task);
 			switch (args.task) {
 				case 'setBlanker':
 					alert("Loader Triggered");
