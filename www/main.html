@@ -68,10 +68,9 @@
 		}
 		var receiveMessage = function receiveMessage(e){
 			var args = e.data;
-			//alert(args.task);
+			alert(args.task);
 			switch (args.task) {
 				case 'setBlanker':
-					//alert("Loader Triggered");
 					document.getElementById('blanker').style.display = 'block';
 					break;
 				case 'removeBlanker':
@@ -88,14 +87,14 @@
 							var args=new Object();
 							args.task='qrReply';
 							args.reply=result.text;
-						//	alert(result.text);
-						//	alert(args.reply);
+							alert(args.reply);
 							document.getElementById('container-frame').contentWindow.postMessage(args, '*');
 						},
 						function (error) {
 							alert("Scanning failed: " + error);
 						}
-					)
+					);
+					break;
 			}
 		};
 		window.addEventListener("message", receiveMessage, false);		
