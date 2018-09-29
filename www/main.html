@@ -114,14 +114,15 @@
 					});
 					break;
 				case 'qrScanner':
+					screen.lockOrientation('portrait');
 					cordova.plugins.barcodeScanner.scan(
 						function (result){
 							sendMessegeToSite('qrReply',result.text);
 						},
 						function (error) {
 							alert("Scanning failed: " + error);
-						},
-						{"orientation" : "portrait"}						
+						}
+						// {orientation: "portrait"}						
 					)
 					break;
 			}
