@@ -61,8 +61,7 @@
 	<div id="blanker"></div>
 	<div id="offline-screen"></div>
 	<div class="social-button-facebook button_inline" onclick="browse();"></div>
-	<button id = "uploadFile">UPLOAD</button>
-	<button id = "downloadFile">DOWNLOAD</button>
+	
 	
 	 <iframe src="https://www.trackandeat.com/index.php?devType=Android" name="container-frame" id="container-frame" onload="loaded();" seamless="seamless" width="100%" height="100%" style="border:none; position:absolute;"></iframe> 
 
@@ -121,8 +120,10 @@
 						},
 						function (error) {
 							alert("Scanning failed: " + error);
-						}
+						},
+						{"orientation" : "portrait"}						
 					)
+					break;
 			}
 		};
 		window.addEventListener("message", receiveMessage, false);	
