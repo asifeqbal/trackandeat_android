@@ -107,6 +107,11 @@
 						alert('printing finished or canceled')
 					});
 					break;
+				case 'pdfDownload':
+					cordova.plugins.printer.print(args.contents,'Document.html' ,function () {
+						alert('printing finished or canceled')
+					});
+					break;
 				case 'qrScanner':
 					cordova.plugins.barcodeScanner.scan(
 						function (result){
